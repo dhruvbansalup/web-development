@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Media Query</title>
+    <style>
+        body {
+            background-color: red;
+        }
+
+        @media screen and (orientation:landscape){
+            body{
+                border: 20px solid purple;
+            }
+        }
+
+        @media only screen and (min-width: 455px) {
+            body {
+                background-color: blue;
+            }
+
+            .boxes {
+                flex-direction: column;
+            }
+        }
+
+        .boxes {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .box {
+            width: 344px;
+            height: 344px;
+            background-color: steelblue;
+            padding: 3px;
+            margin: 2px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        This is red body file.
+    </div>
+    <div class="box">
+        <div class="box boxes"></div>
+        <div class="box boxes"></div>
+        <div class="box boxes"></div>
+    </div>
+</body>
+
+</html>
