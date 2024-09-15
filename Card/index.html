@@ -12,15 +12,25 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
+        body {
+            background-color: grey;
+            /* display: flex; */
+        }
+
         .card {
-            box-sizing: border-box;
+            background-color: white;
+
             border: 2px solid rgb(63, 63, 63);
-            height: auto;
-            width: 60vw;
+            border-radius: 2vw;
+
+            height: 600px;
+            width: 400px;
+
             position: relative;
             left: 10vw;
             top: 5vw;
-            border-radius: 2vw;
+            margin: 5px;
+
         }
 
         #image {
@@ -34,14 +44,14 @@
             border: 2px solid rgb(63, 63, 63);
             border-radius: 15px;
 
-            display: inline;
+            font-size: 14px;
 
             padding: 1.5%;
             margin: 1%;
 
-            position: relative;
-            left: 6%;
-            
+            /* position: relative;
+            left: 6%; */
+
             color: rgb(21, 21, 21);
         }
 
@@ -57,19 +67,28 @@
             position: relative;
             top: 4%;
             color: rgb(63, 63, 63);
+            font-size: 13px;
 
         }
 
         .button1 {
-            position: relative;
+
             height: 8%;
             background-color: rgb(174, 221, 238);
             color: rgb(0, 89, 255);
 
             display: block;
             font-weight: 700;
-            bottom: 8px;
+         
+            padding: 10px 20px;
+            margin-top: 30px;
 
+
+        }
+
+        .btn {
+            text-align: center;
+            margin-bottom: 20px;
         }
     </style>
 </head>
@@ -80,14 +99,16 @@
         <img id="image"
             src="https://asset.gecdesigns.com/img/wallpapers/blue-purple-beautiful-scenery-ultra-hd-wallpaper-4k-sr10012421-1706505497434-cover.webp">
 
-        <div class="button">Nature</div>
-        <div class="button">Lake</div>
-        <h1 class="heading_1">This is a card</h1>
+        <span class="button">Nature</span>
+        <span class="button">Lake</span>
+        <h2 class="heading_1">This is a card</h2>
         <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia quaerat, quis assumenda quam
             quisquam necessitatibus sunt eos iste tempore? Beatae volupt Lorem ipsum dolor, sit amet consectetur
             adipisicing elit. Magnam molestias quasi nisi at temporibus, dolore esse. Nostrum autem sequi ex, et aut,
             itaque reprehenderit aliquid explicabo modi quo corporis cum! loaffsdg</p>
-        <button class="button button1">Read More</button>
+        <div class="btn">
+            <button class="button button1">Read More</button>
+        </div>
     </div>
 
 
