@@ -1,0 +1,29 @@
+:root {
+    --color1: rgb(154, 19, 227);
+    --color2: rgb(234, 105, 223);
+    --color3: rgb(46, 141, 46);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    background-color: var(--color1);
+    padding: 3px;
+}
+
+.navbar ul li {
+    margin: 2px 10px;
+    padding: 5px 15px;
+    background-color: var(--color2);
+    border-radius: 10px;
+
+}
+
+.navbar ul li:hover {
+    background-color: var(--color3);
+}
