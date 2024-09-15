@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Element Selector */
+        .red {
+            background-color: red;
+        }
+
+        /* ID Slector */
+        #green {
+            background-color: forestgreen;
+        }
+
+        /* Child Selector */
+        div>p {
+            color: blue;
+            background-color: yellow;
+        }
+        /* Universal selector */
+        *{
+            margin: 0;padding: 0;
+        }
+        /* Pseudo select */
+        a:visited{
+            color: red;
+        }
+        a:link{
+            color: brown;
+        }
+        a:active{
+            background-color: purple;
+        }
+        a:hover{
+            background-color: gold;
+        }
+        p:first-child{
+            background-color: aqua;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="one">
+        <p>I am first</p>
+        <p>I am second</p>
+    </div>
+    <div class="red">
+        <article>
+            <p>Para inside article</p>
+        </article>
+        This is Div
+        <p>This is a para inside div</p>
+    </div>
+    <br>
+    <br>
+    <div id="green">
+        <p>Para 1
+        <p>Para2</p>
+        </p>
+        This is second div
+    </div>
+    <a href="https://www.google.com">Go to google</a>
+</body>
+
+</html>
