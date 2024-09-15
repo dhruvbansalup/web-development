@@ -1,16 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Card</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
 
+        .card {
+            box-sizing: border-box;
+            border: 2px solid grey;
+            height: 90vw;
+            width: 60vw;
+            position: relative;
+            left: 10vw;
+            top: 5vw;
+            border-radius: 2vw;
+        }
+
+        #image {
+            height: 48%;
+            width: 96%;
+            border-radius: 2vw;
+            margin: 2%;
+        }
+
+        .button {
+            border: 2px solid grey;
+            border-radius: 15px;
+
+            display: inline;
+            
+            padding: 1.5%;
+            margin: 1%;
+            
+            position: relative;
+            left: 6%;
+            top: 3%;
+        }
+
+        .heading_1 {
+            margin: 4%;
+            position: relative;
+            top:5%;
+        }
+        .para{
+            margin:4%;
+            position: relative;
+            top: 4%;
+            
+        }
+        .button1{
+            position: relative;
+            height: 8%;
+            background-color: rgb(174, 221, 238);
+            color: rgb(8, 0, 255);
+            
+            display: block;
+        }
     </style>
 </head>
+
 <body>
 
-    <div class="box"></div>
-    
+    <div class="card">
+        <img id="image"
+            src="https://asset.gecdesigns.com/img/wallpapers/blue-purple-beautiful-scenery-ultra-hd-wallpaper-4k-sr10012421-1706505497434-cover.webp">
+
+        <div class="button">Nature</div>
+        <div class="button">Lake</div>
+        <h1 class="heading_1">This is a card</h1>
+        <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia quaerat, quis assumenda quam quisquam necessitatibus sunt eos iste tempore? Beatae volupt</p>
+        <button class="button button1">Read More</button>
+    </div>
+
+
 </body>
+
 </html>
