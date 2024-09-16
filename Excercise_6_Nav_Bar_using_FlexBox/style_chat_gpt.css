@@ -1,0 +1,62 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Navbar container */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 10px 20px;
+}
+
+/* Navbar items (ul and li elements) */
+.navbar ul {
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+}
+
+.navbar li {
+    color: white;
+    padding: 0 15px;
+    cursor: pointer;
+}
+
+.navbar li:hover {
+    color: #ddd;
+}
+
+/* Logo */
+#logo {
+    width: 50px;
+    height: auto;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+/* Translate button */
+#translate-button {
+    width: 25px;
+    height: auto;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+/* For responsiveness */
+@media (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column;
+    }
+
+    .navbar li {
+        padding: 10px 0;
+    }
+}

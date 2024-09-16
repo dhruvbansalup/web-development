@@ -1,0 +1,71 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ensure consistent sizing across browsers */
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Space between the logo and the menu items */
+    align-items: center;
+    padding: 2vh 10vw; /* Adjust padding for some spacing */
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end; /* Align items to the right */
+    align-items: center;
+    margin: 0;
+}
+
+.navbar ul li {
+    margin: 0 1.5vw;
+    color: #333; /* You can adjust the color */
+    cursor: pointer;
+}
+
+.navbar ul li:hover {
+    color: #555; /* Hover effect */
+}
+
+/* Logo styling */
+#logo {
+    height: 8vh; /* Adjusted to fit better */
+    cursor: pointer;
+}
+
+/* Translate button */
+#translate-button {
+    height: 3vh;
+    cursor: pointer;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        padding: 2vh 5vw;
+    }
+
+    .navbar ul {
+        justify-content: center;
+    }
+
+    .navbar ul li {
+        margin: 10px 0;
+    }
+
+    #logo {
+        margin-bottom: 15px;
+        height: 12vh;
+    }
+
+    #translate-button {
+        height: 5vh;
+    }
+}

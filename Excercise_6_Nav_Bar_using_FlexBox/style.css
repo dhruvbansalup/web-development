@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.logo {
+    height: 18vh;
+}
+
+.right ul {
+    display: flex;
+
+    justify-content: right;
+    align-items: center;
+    margin: 10vh 9vw;
+}
+
+.right ul li {
+    list-style: none;
+    margin: 0 1.5vw;
+}
+
+#translate-button {
+    height: 2.2vw;
+}
