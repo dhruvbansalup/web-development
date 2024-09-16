@@ -1,12 +1,14 @@
 * {
     margin: 0;
     padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 nav {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    margin-top: 9vh;
 }
 
 .logo {
@@ -15,17 +17,20 @@ nav {
 
 .right ul {
     display: flex;
-
     justify-content: right;
     align-items: center;
-    margin: 10vh 9vw;
+    gap: 3vw;
 }
 
 .right ul li {
     list-style: none;
-    margin: 0 1.5vw;
+    cursor: pointer;
+}
+
+.right ul li span {
+    padding: 0 5px;
 }
 
 #translate-button {
-    height: 2.2vw;
+    height: 1.5vw;
 }
