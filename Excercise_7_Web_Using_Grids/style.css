@@ -1,0 +1,174 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* NavBar */
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 4vh;
+}
+
+.logo {
+    height: 10vh;
+}
+
+.right ul {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    gap: 1.2vw;
+}
+
+.right ul li {
+    list-style: none;
+    cursor: pointer;
+
+}
+
+.right ul li span {
+    padding: 0 5px;
+}
+
+#translate-button {
+    height: 1.5vw;
+}
+
+
+
+/* Main Body */
+
+/* Top */
+main {
+    display: grid;
+    justify-content: center;
+}
+
+.Top_section {
+    margin-top: 5vh;
+    width: 65vw;
+
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto auto;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#Top_heading {
+    font-size: 48px;
+    padding: 0 0 10px;
+    font-weight: normal;
+    grid-column: 1/3;
+    text-align: center;
+}
+
+#review_button {
+    position: relative;
+    left: 3%;
+}
+
+#Second_heading {
+    font-size: 24px;
+    padding: 0 0 10px;
+    font-weight: normal;
+    text-align: center;
+    grid-column: 1/3;
+    margin-top: 5vh;
+}
+
+.button {
+    color: white;
+    border: 0;
+    border-radius: 6px;
+    font-weight: bold;
+    padding: 5px;
+}
+
+.top_button {
+    padding: 12px 20px;
+    grid-column: 1/3;
+    justify-self: center;
+    margin: 3vh;
+}
+
+.button_blue {
+    background-color: #00B6D1;
+}
+
+.button_green {
+    background-color: #5CB85C;
+}
+
+
+
+
+/* Mid_section */
+
+.Mid_section {
+    width: 65vw;
+    margin-top: 60px;
+}
+
+.mid_heading_div {
+    display: flex;
+    gap: 2.5%;
+    align-items: center;
+}
+
+#Mid_logo {
+    height: 65px;
+    border: 2px solid black;
+    border-radius: 50%;
+}
+
+#Mid_heading {
+    font-size: 24px;
+    font-weight: normal;
+}
+
+#Mid_heading small {
+    font-size: 14.4px;
+}
+
+.download_buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+
+.download_box {
+    background-color: #F9F9F9;
+    padding: 16px;
+    margin: 15px;
+}
+
+.download_box_heading {
+    text-align: center;
+    font-size: 20px;
+    padding: 0 0 10px;
+}
+
+.download_box_small_heading {
+    font-size: 12px;
+    text-align: center;
+    font-weight: normal;
+    padding-bottom: 10px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-around;
+    padding: 8px 15px;
+}
+
+.Hash {
+    text-align: center;
+    font-size: 10px;
+    margin-top: 10px;
+}
