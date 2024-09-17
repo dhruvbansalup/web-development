@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Filters</title>
+    <style>
+        body {
+            background-color: red;
+        }
+
+        img {
+            /* filter: blur(10px); */
+            width: 30vw;
+        }
+
+        .img1 {
+            filter: brightness(150%) contrast(2) invert(1);
+        }
+
+        .img2 {
+            filter: grayscale(50%) opacity(0.5);
+        }
+
+        .img3 {
+            filter: sepia(50%);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container"><img class="img1"
+            src="https://images.news18.com/ibnlive/uploads/2021/12/untitled-3-167-164067721216x9.jpg">
+        <img class="img2"
+            src="https://4kwallpapers.com/images/wallpapers/shraddha-kapoor-indian-actress-bollywood-actress-portrait-1280x1280-7820.jpg">
+        <img class="img3"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhNbFAoTmCuWxoYTwZFOvRvylLoG8swL7nEQ&s">
+    </div>
+</body>
+
+</html>
