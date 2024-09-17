@@ -1,0 +1,37 @@
+.container {
+    height: 80vh;
+    width: 80vw;
+    background-color: aquamarine;
+    position: relative;
+}
+
+.ball {
+    width: 10vh;
+    border-radius: 100%;
+    border: 2px solid black;
+    position: absolute;
+    bottom: 0;
+
+
+    animation: horizontal_motion 4s linear infinite, verticle_motion 1s ease-out infinite alternate;
+}
+
+@keyframes horizontal_motion {
+    from {
+        left: 0;
+    }
+
+    to {
+        left: 80%;
+    }
+}
+
+@keyframes verticle_motion {
+    from {
+        bottom: 0;
+    }
+
+    to {
+        bottom: 80%;
+    }
+}
