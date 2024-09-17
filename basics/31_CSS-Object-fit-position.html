@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Object Fit and position</title>
+    <style>
+        .container {
+            height: 60vh;
+            width: 60vw;
+            background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrTFrhr_-pYR74jUgOy7IerAoHAX3zPIZZcg&s");
+            background-position: center center;
+            background-repeat: repeat-y;
+            background-clip: border-box;
+        }
+
+        img {
+            width: 100px;
+            height: 100px;
+            /* object-fit: fill; */
+
+            object-fit: cover;
+            /* object-position: bottom right; */
+            /* object-fit: contain; */
+
+            /* object-fit: scale-down; */
+            /* object-fit: none; */
+
+            object-position: -5px 10px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <img src="https://letsenhance.io/static/8f5e523ee6b2479e26ecc91b9c25261e/1015f/MainAfter.jpg">
+    </div>
+</body>
+
+</html>
