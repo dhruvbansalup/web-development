@@ -1,0 +1,163 @@
+:root {
+    --back_height: 80vh;
+    --nav_height: 10vh;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+}
+
+.main {
+    background-image: url("assets/img/background.jpg");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: var(--back_height);
+    position: relative;
+}
+
+.main nav {
+    max-width: 80vw;
+    margin: auto;
+    padding: 5px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    height: var(--nav_height);
+
+}
+
+.main .layer {
+    height: var(--back_height);
+    width: 100%;
+    opacity: 0.7;
+    background-color: black;
+    position: absolute;
+    top: 0;
+}
+
+.main img {
+
+    width: 148px;
+    position: relative;
+    z-index: 10;
+}
+
+.main nav button {
+    position: relative;
+    z-index: 10;
+}
+
+.hero {
+    height: calc(var(--back_height) - var(--nav_height));
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+
+    padding: 23px;
+    text-align: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5%;
+
+    flex-direction: column;
+
+    position: relative;
+
+}
+
+.hero>:first-child {
+    font-weight: 700;
+    font-size: 36px;
+
+    width: 50%;
+}
+
+.hero>:nth-child(2) {
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.hero>:nth-child(3) {
+    font-weight: lighter;
+    font-size: 12px;
+}
+
+.separation {
+    background-color: rgb(40, 40, 40);
+    height: 7px;
+}
+
+.btn {
+    padding: 6px 36px 6px 34px;
+    font-weight: bold;
+    border-radius: 4px;
+
+}
+
+.btn_black,
+.email_get_started>input {
+    border: 1px solid gray;
+    background-color: rgba(1, 1, 1, 0.275);
+    color: white;
+    font-weight: normal;
+    border-radius: 4px;
+}
+
+.btn_red {
+    background-color: red;
+    color: white;
+    border: 0;
+}
+
+.email_get_started>button {
+    font-size: 18px;
+    height: 56px;
+    width: 190px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding:6px;
+}
+
+.email_get_started>input {
+    font-size: 10px;
+    height: 100%;
+    padding: 24px 16px 8px;
+    width: 22vw;
+    
+    align-content: center;
+}
+
+.email_get_started {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    margin-top: 2%;
+}
+
+.email_get_started>button>img{
+    
+    height: 15px;
+    width: 15px;
+}
+
+nav>div>.btn_red{
+    width: 80px;
+    padding: 6px 6px;
+    margin-left: 10px;
+}
+
