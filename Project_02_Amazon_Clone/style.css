@@ -1,0 +1,29 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.nav_bar{
+    background-color: #0F1111;
+
+    height: 60px;
+
+    display: flex;
+
+    color: white;
+}
+.left_nav_bar{
+    height: 100%;
+
+
+    
+}
+.main_logo{
+
+
+}
+.main_logo>img{
+    width: 100px;
+}
