@@ -5,6 +5,10 @@
     font-family: Arial, sans-serif;
 }
 
+
+/* MAIN NAV BAR */
+
+
 .nav_bar {
     background-color: #0F1111;
 
@@ -24,9 +28,10 @@
 
 .left_nav_bar {
     height: 100%;
-    width: 450px;
     padding: 2px 6px;
     display: flex;
+    margin-left: 15px;
+    margin-right: auto;
 }
 
 .border_hover {
@@ -99,9 +104,6 @@
 }
 
 
-
-
-
 .middle_nav_bar {
     height: 100%;
     padding: 2px 6px;
@@ -109,6 +111,7 @@
     display: flex;
 
     /* width: 100%; */
+    flex-grow: 1;
 }
 
 
@@ -184,6 +187,7 @@
     height: 100%;
     align-items: center;
     margin-right: 15px;
+    margin-left: auto;
 }
 
 
