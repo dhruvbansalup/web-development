@@ -1,0 +1,49 @@
+:root {
+    --red-color: #ff0000;
+    --blue-color: #0000ff;
+    --white-color: #ffffff;
+    --green-color: #259e3f;
+    --background-color: #fdfdbb;
+    --black-color: #000000;
+}
+
+
+body{
+    background-color: var(--background-color);
+}
+
+div{
+    margin: 20px;
+}
+
+a{
+    color:var(--red-color)
+}
+
+table{
+    background-color: var(--black-color);
+    color: var(--white-color);
+    text-align: right;
+}
+
+#table-head{
+    background-color: var(--green-color);
+    color: var(--black-color);
+    text-align: center;
+}
+
+th{
+    padding: 5px;
+}
+td{
+    padding: 5px;
+}
+
+#Footer{
+    position: fixed;
+    bottom: 10px;
+    width: 100%;
+}
+h5{
+    text-align: center;
+}

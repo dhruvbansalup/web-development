@@ -1,0 +1,38 @@
+:root {
+    --red-color: #ff0000;
+    --blue-color: #0000ff;
+    --white-color: #ffffff;
+    --green-color: #259e3f;
+    --background-color: #fdfdbb;
+    --black-color: #000000;
+}
+
+
+body{
+    background-color: var(--background-color);
+}
+
+div{
+    margin: 20px;
+}
+
+a{
+    color:var(--red-color)
+}
+
+span{
+    color:var(--blue-color);
+    font-weight: bold;
+}
+
+h1{
+    text-align: center;
+}
+#Footer{
+    position: fixed;
+    bottom: 10px;
+    width: 100%;
+}
+h5{
+    text-align: center;
+}
