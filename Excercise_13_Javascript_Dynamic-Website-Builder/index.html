@@ -9,6 +9,21 @@
 </head>
 
 <body>
+    <div class="header">
+        <h1>Dynamic Youtube Cards</h1>
+    </div>
+    <div class="FormContainer">
+    <div class="addForm">
+    <input type="text" id="titleInput" placeholder="Title">
+    <input type="text" id="channelInput" placeholder="Channel">
+    <input type="text" id="viewsInput" placeholder="Views">
+    <input type="text" id="monthOldInput" placeholder="Month Old">
+    <input type="text" id="durationInput" placeholder="Duration">
+    <input type="text" id="imgInput" placeholder="Image URL">
+    <button onclick="createCard(document.getElementById('titleInput').value,document.getElementById('channelInput').value,document.getElementById('viewsInput').value,document.getElementById('monthOldInput').value,document.getElementById('durationInput').value, document.getElementById('imgInput').value)">Add</button>
+    </div>
+</div>
+
     <div class="container">
         <!-- <div class="card">
             <div class="srno">1</div>

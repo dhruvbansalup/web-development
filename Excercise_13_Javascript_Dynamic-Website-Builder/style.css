@@ -86,21 +86,71 @@ body {
 }
 
 
-/* button */
-
-/* .button{
+/* Form */
+.FormContainer{
     display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    width: 100%;
+    align-self: center;
+    margin-bottom: 20px;
+}
+.addForm {
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 10px;
+    row-gap: 10px;
+    width: 80%;
+    align-self: center;
+    margin-bottom: 20px;
     justify-content: center;
-    margin: 20px;
+   
+    border: 1px solid #ccc;  /* Added border for modern look */
+    border-radius: 10px;  /* Rounded corners for modern design */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Subtle shadow for depth */
+    background-color: #f9f9f9;  /* Light background for contrast */
+    padding: 20px;  /* Increased padding for better spacing */
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    column-gap: 10px;
+    row-gap: 10px;
+    width: 80%;
+    align-self: center;
+    margin-bottom: 20px;
+    justify-content: center;
 }
 
-button{
+.addForm input {
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 100%;
+}
+
+.addForm button {
     padding: 5px 10px;
     border-radius: 5px;
-    background-color: #007bff;
+    background-color: goldenrod;
     color: white;
     border: none;
     cursor: pointer;
-    width: 100px;
+    width: 200px;
+    justify-self: center;
+    grid-column: span 2;
+}
 
-} */
+
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #444;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.header h1 {
+    font-size: 24px;
+    font-weight: bold;
+}
