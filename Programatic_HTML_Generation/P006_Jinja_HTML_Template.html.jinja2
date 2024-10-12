@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mobile Data</title>
+</head>
+<body>
+    <h1>Mobile Data</h1>
+    <table border="1">
+        <thead><tr>
+            <th>Brand</th>
+            <th>Model</th>
+            <th>Price</th>
+        </tr></thead>
+    <tbody>
+    {% for line in data %}
+        <tr>
+            <td>{{ line.Brand }}</td>
+            <td>{{ line['Model'] }}</td>
+            <td>{{ line.Price }}</td>
+        </tr>
+    {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

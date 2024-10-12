@@ -1,0 +1,11 @@
+tempCodeRunnerFile.py
+
+# Virtual Enviroments
+*-env
+*.env
+*.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/

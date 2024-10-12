@@ -1,3 +1,6 @@
+# Jinja Docs
+# https://jinja.palletsprojects.com/en/3.1.x/
+
 # Jinja by flask is a templating engine that allows you to generate HTML files programatically
 from jinja2 import Template
 
