@@ -20,3 +20,7 @@ button.addEventListener("mouseenter", ()=>{
 button.addEventListener("mouseleave", ()=>{
     document.querySelector(".box").innerHTML="Good"
 })
+
+document.addEventListener("keydown", (e)=>{
+    document.querySelector("H3").innerHTML=e.key
+})
