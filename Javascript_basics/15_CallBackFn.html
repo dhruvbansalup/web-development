@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        console.log("Start");
+        console.log("second line")
+        setTimeout(() => {
+            console.log("Inside setTimeout 1milisec");
+        }, 1);
+        setTimeout(() => {
+            console.log("Inside setTimeout 0");
+        }, 0);
+        setTimeout(() => {
+            console.log("Inside setTimeout 2sec");
+        }, 2000);
+        console.log("End");
+
+
+        const callback = (arg) => {
+            console.log(arg);
+        }
+
+        const loadScript = (src, callback) => {
+            let sc = document.createElement("script");
+            sc.src = src;
+            sc.onload = callback(src);
+            document.head.append(sc);
+
+        }
+
+        loadScript("https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.11/lodash.js", callback);
+    </script>
+</body>
+
+</html>
