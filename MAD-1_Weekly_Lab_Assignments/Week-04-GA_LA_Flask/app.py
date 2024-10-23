@@ -1,5 +1,4 @@
 from flask import Flask, request, render_template
-import jinja2
 import matplotlib.pyplot as plt
 
 # Function to get whole data from file
@@ -21,63 +20,19 @@ def get_required_data(file,idType,idValue):
     for line in FullData:
         if line[idType]==idValue:
             data.append(line)
-   
     return data
 
 #Function to get HTML Content if ID is Student ID
-def get_HTML_byStudentID(data):
+def get_Total(data):
     #Calculate Total Marks
     total=0
     for line in data:
         line['marks']=int(line['marks'])
         total+=line['marks']
-    
-    #Using Jinja2 Template
-    HTML_Template="""
-    <!DOCTYPE html>
-    <html lang="en">
+    return total
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Student Data</title>
-    </head>
-
-    <body>
-        <h1>Student Details</h1>
-        <table border="2" id="student-details-table">
-            <thead>
-                <tr>
-                    <th>Student ID</th>
-                    <th>Course ID</th>
-                    <th>Marks</th>
-                </tr>
-            </thead>
-            <tbody>
-                {% for line in data %}
-                <tr>
-                    <td>{{ line.student_id }}</td>
-                    <td>{{ line.course_id }}</td>
-                    <td>{{ line.marks }}</td>
-                </tr>
-                {% endfor %}
-                <tr>
-                    <td colspan="2" style="text-align:center">Total Marks</td>
-                    <td>{{ total }}</td>
-                </tr>
-            </tbody>
-        </table>
-        <br>
-        <a href="/">Go Back</a>
-
-    </body>
-    </html>
-    """
-    html_content = jinja2.Template(HTML_Template).render(data=data,total=total)
-    return html_content
 #Function to get HTML Content if ID is Course ID
-def get_HTML_byCourseID(data):
-    
+def get_Avg_Max_Graph(data,img):
     #Calculate Average and Maximum
     totalMarks=0
     maxMarks=0
@@ -95,65 +50,16 @@ def get_HTML_byCourseID(data):
     
     # Use Agg backend for matplotlib
     plt.switch_backend('Agg')
+    plt.clf()
 
-    img="static/plot.png"
     plt.bar(marks_frequency.keys(), marks_frequency.values(), color='blue')
     plt.xlabel('Marks')
     plt.ylabel('Frequency')
     plt.savefig(img)
     plt.close()
 
-    #Using Jinja2 Template
-    HTML_Template="""
-    <!DOCTYPE html>
-    <html>
-    <head>
-        <title>Course Data</title>
-    </head>
-    <body>
-        <h1>Course Details</h1>
-        <table border="1">
-            <thead>
-                <tr>
-                    <th>Average Marks</th>
-                    <th>Maximum Marks</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>{{ avgMarks }}</td>
-                    <td>{{ maxMarks}}</td>
-                </tr>
-            </tbody>
-        </table>
-        <br>
-        <img src="{{ image }}">
-        <br>
-        <a href="/">Go Back</a>
-    </body>
-    </html>
-    """
-
-    #Render HTML using jinja2
-    html_content = jinja2.Template(HTML_Template).render(avgMarks=avgMarks,maxMarks=maxMarks,image=img)
-    return html_content
-
-
-#Function to get HTML Content
-def get_HTML(data,idType):
-
-    if idType=='student_id':
-        return get_HTML_byStudentID(data)
-    else:
-        return get_HTML_byCourseID(data)
-
-#Fuction to write content to file
-def write_content(file,content):
-    f=open(file,'w')
-    f.write(content)
-    f.close()
-
-   
+    return avgMarks,maxMarks
+  
 
 # Flask app
 app = Flask(__name__)
@@ -167,21 +73,26 @@ def index():
             idType=request.form['ID']
             idValue=request.form['id_value']
         except:
-            return render_template('wronginput.html')
+            return render_template('wronginput.html',error="Invalid Input")
+        
         #Get Required Data
         file='data.csv'
         data= get_required_data(file,idType,idValue)
         #If data is empty
         if not data:
-            return render_template('wronginput.html')
-        #Get HTML Content
-        html_content=get_HTML(data,idType)
-        #Write Content to file
-        write_content('templates/show.html',html_content)
+            return render_template('wronginput.html',error="No Data Found")
 
-        return render_template('show.html')
+        if idType=='student_id':
+            return render_template('student_data.html',data=data, total=get_Total(data))
+        elif idType=='course_id':
+            img='static/plot.png'
+            avg,max=get_Avg_Max_Graph(data,img)
+            return render_template('course_data.html',avgMarks=avg,maxMarks=max,image=img)
+        else:
+            return render_template('wronginput.html',error="Invalid ID Type")
+        
     else:
-        return render_template('wronginput.html')
+        return render_template('wronginput.html',error="Invalid Request Method")
 
 if __name__=="__main__": 
     app.run()
