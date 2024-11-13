@@ -1,0 +1,109 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+}
+
+a {
+    display: inline-block;
+    margin-top: 20px;
+    text-decoration: none;
+    color: #007BFF;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Styles for INDEX.HTML */
+#data-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#data-form input[type="text"] {
+    margin: 10px 0;
+    padding: 5px;
+    width: 200px;
+}
+
+#data-form input[type="submit"] {
+    padding: 5px 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#data-form input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Styles for STUDENT_DATA.HTML */
+#student-details-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+#student-details-table th, #student-details-table td {
+    padding: 10px;
+    text-align: center;
+}
+
+#student-details-table th {
+    background-color: #007BFF;
+    color: white;
+}
+
+#student-details-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Styles for COURSE_DATA.HTML */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+table th, table td {
+    padding: 10px;
+    text-align: center;
+}
+
+table th {
+    background-color: #007BFF;
+    color: white;
+}
+
+table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+img {
+    display: block;
+    margin: 20px auto;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Styles for WRONGINPUT.HTML */
+p {
+    color: red;
+    text-align: center;
+}
+
+i {
+    display: block;
+    text-align: center;
+    color: #555;
+}
