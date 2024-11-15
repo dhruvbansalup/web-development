@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Articles</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        .article {
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 10px;
+            margin-bottom: 10px;
+        }
+        .article h2 {
+            color: #333;
+        }
+        .article p {
+            color: #666;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>{{ articles | length }} articles found</h1>
+    {% for article in articles %}
+    <div class="article">
+        <h2>{{ article.title }}</h2>
+        <p>{{ article.content }}</p>
+    </div>
+    {% endfor %}
+</body>
+
+</html>
