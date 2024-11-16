@@ -13,7 +13,7 @@
 <body class="p-3">
 
     <div class="container">
-        <h1 class="jumbotron">All Articles</h1>
+        <h1 class="jumbotron">Articles by {{ articles[0].authors[0].username }}</h1>
         <h5>{{ articles | length }} articles found</h5>
         <div class="row">
             <div class="col-md-2">
@@ -34,7 +34,7 @@
                     <i>
                         <b>Written By:</b>
                         {% for author in article.authors %}
-                        <a href="/articles_by/{{ author.username }}">{{ author.username }}</a>
+                        {{ author.username }}
                         {% if not loop.last %}, {% endif %}
                         {% endfor %}
                     </i>

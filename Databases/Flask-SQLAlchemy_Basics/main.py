@@ -29,12 +29,12 @@ class Article(db.Model): #creating the Article table
     title=db.Column(db.String)
     content=db.Column(db.String)
 
-    author_id=db.relationship('User',secondary="article_author")
+    authors=db.relationship('User',secondary="article_author")
 
 class ArticleAuthors(db.Model): #creating the ArticleAuthors table
     __tablename__="article_author"
     article_id=db.Column(db.Integer,db.ForeignKey('article.article_id'),primary_key=True)
-    author_id=db.Column(db.Integer,db.ForeignKey('user.user_id'),primary_key=True)
+    user_id=db.Column(db.Integer,db.ForeignKey('user.user_id'),primary_key=True)
 
     user = db.relationship('User')
     article = db.relationship('Article')
@@ -47,6 +47,12 @@ def articles():
     # articles=db.session.query(Article).all()
 
     return render_template("articles.html",articles=articles)
+
+@app.route("/articles_by/<user_name>",methods=["GET","POST"])
+def articles_by(user_name):
+    articles=Article.query.filter(Article.authors.any(username=user_name)).all()
+
+    return render_template("articlesByuser.html",articles=articles)
 
 
 if __name__=="__main__":
