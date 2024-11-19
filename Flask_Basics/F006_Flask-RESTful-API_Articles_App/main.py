@@ -27,9 +27,9 @@ app,api = create_app()
 from application.controllers import *
 
 #Add all restful Controllers
-from application.api import userAPI
-api.add_resource(userAPI,"/api/user","/api/user/<string:username>")
-
+from application.api import userAPI,AllTableViewAPI
+api.add_resource(userAPI,"/api/user","/api/user/<string:username>") 
+api.add_resource(AllTableViewAPI,"/api/table/<string:table>")
 
 
 if __name__ == '__main__':
