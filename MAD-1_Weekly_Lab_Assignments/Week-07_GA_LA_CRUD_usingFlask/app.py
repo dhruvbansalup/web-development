@@ -67,19 +67,20 @@ def updateStudent(student_id):
         if f_name:
             SelectedStudent.first_name = f_name
             SelectedStudent.last_name = l_name
-            db.session.commit()
-                        
+             
             if crs_id:
                 existing_enrollment = Enrollments.query.filter_by(estudent_id=student_id, ecourse_id=crs_id).first()
+
                 if not existing_enrollment:
-                    stu_id=student_id
-                    db.session.add(Enrollments(estudent_id=stu_id, ecourse_id=crs_id))
-                    db.session.commit()
+                    new_enrollment=Enrollments(estudent_id=student_id, ecourse_id=crs_id)
+                    db.session.add(new_enrollment)
+                    
         else:
             return render_template('error.html',error="First Name is Required!!")
 
+        db.session.commit()
         return redirect('/')       
-    
+
     return render_template('update_student.html',allcourses=all_courses,student=SelectedStudent,student_id=student_id)
 
 
