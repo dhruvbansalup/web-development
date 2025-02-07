@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.16/dist/vue.js"></script>
+
+</head>
+
+<body>
+
+    <div id="app">
+
+        <h1>2-way data binding</h1>
+        <input v-model="input_data" type="text">
+        <h4>{{input_data}}</h4>
+
+        <h2>Foods</h2>
+        <ul>
+            <li v-for="(x,index) in foods" v-bind:key="index">{{index}} - {{x}}</li>
+        </ul>
+
+
+
+        <h1>Conditionalls</h1>
+        <h3 v-if="false">Hello</h3>
+        <h3 v-if="true">Vue</h3>
+        <h3 v-if="show">World</h3>
+
+
+        <h1>Events</h1>
+        <h3>{{count}}</h3>
+        <button v-on:click="click()">Click</button>
+
+        <h1>Computed</h1>
+        <h3>{{lenfoods}}</h3>
+    </div>
+
+    <script>
+
+        const vueApp = new Vue({
+            el: "#app",
+            data: {
+                food: "pizza 🍕",
+                input_data: "Write here",
+                foods: ["pizza", "burger", "fries", "banana"],
+                show: true,
+                count: 0,
+            },
+
+            methods: {
+                click() {
+                    this.count++;
+                }
+            },
+
+            computed:{
+                lenfoods(){
+                    return this.foods.length;
+                }
+            }
+        })
+
+    </script>
+
+</body>
+
+</html>

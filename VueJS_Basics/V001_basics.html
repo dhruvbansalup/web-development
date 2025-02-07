@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Vue CDN Link -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.16/dist/vue.js"></script>
+
+    <style>
+        .green {
+            color: green;
+        }
+
+        .purple {
+            background-color: rgb(219, 15, 219);
+        }
+
+        .red {
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- every thing inside this div is controlled by vue -->
+    <div id="app">
+        <!-- static data -->
+        <h1>Vue App Heading</h1>
+
+        <!-- dynamic Data -->
+
+        <!-- v-bind : vue directive for data binding -->
+        <h2 v-bind:class="class_name">{{food}},{{class_name}} <!-- One Way Data Binding --></h2>
+        <h2 v-bind:class="1>2?'purple':'red'">{{food}},{{class_name}} <!-- One Way Data Binding --></h2>
+        <h2 :class="13>21?'red':'green'">{{food}},{{class_name}} <!-- One Way Data Binding --></h2>
+        <!-- v-bind:<attribute_name>=<"expression/data"> -->
+
+        <!-- This Vue is not controlled by 2nd Instance -->
+        <div id="app2">{{food}}</div>
+    </div>
+
+    <hr>
+
+    <!-- This is outside vue app -->
+    <div>{{food}}</div>
+
+    <hr>
+
+    <!-- This is 2nd Vue-->
+    <div id="app2">
+        <h2>{{food}}</h2>
+    </div>
+
+    <script>
+        const vueApp = new Vue({ //Options Object
+            el: "#app",
+            data: { //Creating dynamic data
+                food: "pizza 🍕",
+                class_name: "green purple"
+            },
+        })
+
+        new Vue({
+            el: "#app2",
+            data: {
+                food: "Burger 🍔"
+            }
+        })
+
+    </script>
+
+</body>
+
+</html>
