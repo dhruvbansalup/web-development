@@ -6,7 +6,7 @@ from flask_restful import Resource, Api
 app=Flask(__name__)
 
 #Adding database path
-app.config["SQLALCHEMY_DATABASE_URI"]="sqlite:///emp_db"
+app.config["SQLALCHEMY_DATABASE_URI"]="sqlite:///emp_db.sqlite3"
 
 #Creating Database instance i.e app is connected to db
 db=SQLAlchemy(app)
