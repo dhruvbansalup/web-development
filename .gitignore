@@ -198,3 +198,5 @@ coverage
 
 *.tsbuildinfo
 .vscode
+
+__pycache__
